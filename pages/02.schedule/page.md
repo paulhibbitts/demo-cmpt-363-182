@@ -57,7 +57,7 @@ hide_git_sync_repo_link: false
 :fa-book:[plugin:page-inject](/all-readings/week-08?template=partials/embedlycardlinkonly)  
 :fa-users: In-class office hours (tentative)  
 
-## [:fa-calendar-o:Week 9 (Jul 4 - 10)
+## :fa-calendar-o:Week 9 (Jul 4 - 10)
 **Instructor User Research Plan Meetings**  
 TASC 1 8003
 
