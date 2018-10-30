@@ -1,5 +1,6 @@
 ---
 title: Home
+published: true
 metadata:
     'twitter:card': summary
     'twitter:site': '@hibbittsdesign'
@@ -10,7 +11,6 @@ sitemap:
     changefreq: monthly
 body_classes: 'header-image fullwidth'
 child_type: item
-visible: true
 content:
     items: '@self.children'
     limit: 7
