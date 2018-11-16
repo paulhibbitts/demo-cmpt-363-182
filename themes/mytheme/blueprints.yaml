@@ -213,6 +213,20 @@ form:
                             _parent: 'Open in the parent frame'
                             _top: 'Open in the full body of the window'
                             _self: 'Open in the same frame as clicked'
+            multicoursehub:
+                type: section
+                title: 'Multi-course Hub'
+                underline: true
+            multi_course_hub.enabled:
+                type: toggle
+                label: 'Enable Multi-course Hub Mode'
+                highlight: 1
+                default: 0
+                options:
+                    1: 'Yes'
+                    0: 'No'
+                validate:
+                    type: bool
 
         bootstrap4_options:
           type: tab
