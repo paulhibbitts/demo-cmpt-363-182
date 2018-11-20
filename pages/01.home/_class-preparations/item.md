@@ -14,4 +14,4 @@ never_cache_twig: true
 ##### Slides to be Discussed
 [Usability Testing](https://docs.google.com/viewerng/viewer?url=demo.hibbittsdesign.org/cmpt-363-182/pdfs/cmpt-363-182-usability-testing.pdf)
 
-Did you attend this class? [Share your one-minute summary](https://canvas.sfu.ca/courses/41288/assignments/329328) before midnight, the day of class
+Did you attend this class? [Share your one-minute summary](https://canvas.sfu.ca/courses/41288/assignments/329328) before midnight, the day of class.
