@@ -5,4 +5,5 @@ pdf_url: 'https://demo.hibbittsdesign.org/cmpt-363-182/pdfs/cmpt363-guest-chilan
 published: true
 visible: true
 cache_enable: false
+display_content_links: false
 ---
