@@ -27,16 +27,16 @@
 {% if displaycontentlinks is defined %}
   {% if displaycontentlinks %}
   {% if not (page.header.pdf_git_repo_url) %}
-    (<a class="newwindow external-link" href="{{ page.header.pdf_url }}"><i class="fa {{pdf_download_link_icon}}" aria-hidden="true"></i>&nbsp;{{pdf_url_link_text}}</a>)
+    (<a class="newwindow external-link" href="{{ page.header.pdf_url }}"><i class="fa {{pdf_download_link_icon}}" aria-hidden="true"></i>{{pdf_url_link_text}}</a>)
   {% else %}
-    (<a class="newwindow external-link" href="{{ page.header.pdf_url }}"><i class="fa {{pdf_download_link_icon}}" aria-hidden="true"></i>&nbsp;{{pdf_url_link_text}}</a> or <a class="newwindow external-link" href="{{ page.header.pdf_git_repo_url }}"><i class="fa {{pdf_git_repo_link_icon}}" aria-hidden="true"></i>&nbsp;{{pdf_git_repo_link_text}}</a>)
+    (<a class="newwindow external-link" href="{{ page.header.pdf_url }}"><i class="fa {{pdf_download_link_icon}}" aria-hidden="true"></i>{{pdf_url_link_text}}</a> or <a class="newwindow external-link" href="{{ page.header.pdf_git_repo_url }}"><i class="fa {{pdf_git_repo_link_icon}}" aria-hidden="true"></i>{{pdf_git_repo_link_text}}</a>)
   {% endif %}
   {% endif %}
 {% else %}
   {% if not (page.header.pdf_git_repo_url) %}
-    (<a class="newwindow external-link" href="{{ page.header.pdf_url }}"><i class="fa {{pdf_download_link_icon}}" aria-hidden="true"></i>&nbsp;{{pdf_url_link_text}}</a>)
+    (<a class="newwindow external-link" href="{{ page.header.pdf_url }}"><i class="fa {{pdf_download_link_icon}}" aria-hidden="true"></i>{{pdf_url_link_text}}</a>)
   {% else %}
-    (<a class="newwindow external-link" href="{{ page.header.pdf_url }}"><i class="fa {{pdf_download_link_icon}}" aria-hidden="true"></i>&nbsp;{{pdf_url_link_text}}</a> or <a class="newwindow external-link" href="{{ page.header.pdf_git_repo_url }}"><i class="fa {{pdf_git_repo_link_icon}}" aria-hidden="true"></i>&nbsp;{{pdf_git_repo_link_text}}</a>)
+    (<a class="newwindow external-link" href="{{ page.header.pdf_url }}"><i class="fa {{pdf_download_link_icon}}" aria-hidden="true"></i>{{pdf_url_link_text}}</a> or <a class="newwindow external-link" href="{{ page.header.pdf_git_repo_url }}"><i class="fa {{pdf_git_repo_link_icon}}" aria-hidden="true"></i>{{pdf_git_repo_link_text}}</a>)
   {% endif %}
 {% endif %}
 <div class="embed-responsive embed-responsive-4by3">
