@@ -1,3 +1,4 @@
+{# no tab indents for Page Inject Plugin compatibility - hibbittsdesign.org #}
 {% if page.header.published %}
 
 {% set pdf_url_link_text = 'Download PDF' %}
@@ -5,42 +6,50 @@
 {% set pdf_git_repo_link_text = 'Suggest an Edit on GitLab' %}
 {% set pdf_git_repo_link_icon = 'fa-gitlab' %}
 
+{% if page.header.display_content_titles is defined %}
+{% set displaycontenttitle = page.header.display_content_titles %}
+{% endif %}
+
+{% if page.header.display_content_links is defined %}
+{% set displaycontentlinks = page.header.display_content_links %}
+{% endif %}
+
 {% block content %}
 {{ page.content }}
 {% if displaypagetitle is defined %}
-  {% if displaypagetitle %}
-  <strong>{{page.title}}</strong>
-  {% endif %}
+{% if displaypagetitle %}
+<strong>{{page.title}}</strong>
+{% endif %}
 {% endif %}
 {% if displaycontenttitle is defined %}
-  {% if displaycontenttitle %}
-    {% if displaypagetitle is defined %}
-    {% if displaypagetitle %}
-      <br>
-    {% endif %}
-    {% endif %}
-  {{ page.header.pdf_title }}
-  {% endif %}
+{% if displaycontenttitle %}
+{% if displaypagetitle is defined %}
+{% if displaypagetitle %}
+<br>
+{% endif %}
+{% endif %}
+{{ page.header.pdf_title }}
+{% endif %}
 {% else %}
-  {{ page.header.pdf_title }}
+{{ page.header.pdf_title }}
 {% endif %}
 {% if displaycontentlinks is defined %}
-  {% if displaycontentlinks %}
-  {% if not (page.header.pdf_git_repo_url) %}
-    (<a class="newwindow external-link" href="{{ page.header.pdf_url }}"><i class="fa {{pdf_download_link_icon}}" aria-hidden="true"></i>{{pdf_url_link_text}}</a>)
-  {% else %}
-    (<a class="newwindow external-link" href="{{ page.header.pdf_url }}"><i class="fa {{pdf_download_link_icon}}" aria-hidden="true"></i>{{pdf_url_link_text}}</a> or <a class="newwindow external-link" href="{{ page.header.pdf_git_repo_url }}"><i class="fa {{pdf_git_repo_link_icon}}" aria-hidden="true"></i>{{pdf_git_repo_link_text}}</a>)
-  {% endif %}
-  {% endif %}
+{% if displaycontentlinks %}
+{% if not (page.header.pdf_git_repo_url) %}
+(<a class="newwindow external-link" href="{{ page.header.pdf_url }}"><i class="fa {{pdf_download_link_icon}}" aria-hidden="true"></i>{{pdf_url_link_text}}</a>)
 {% else %}
-  {% if not (page.header.pdf_git_repo_url) %}
-    (<a class="newwindow external-link" href="{{ page.header.pdf_url }}"><i class="fa {{pdf_download_link_icon}}" aria-hidden="true"></i>{{pdf_url_link_text}}</a>)
-  {% else %}
-    (<a class="newwindow external-link" href="{{ page.header.pdf_url }}"><i class="fa {{pdf_download_link_icon}}" aria-hidden="true"></i>{{pdf_url_link_text}}</a> or <a class="newwindow external-link" href="{{ page.header.pdf_git_repo_url }}"><i class="fa {{pdf_git_repo_link_icon}}" aria-hidden="true"></i>{{pdf_git_repo_link_text}}</a>)
-  {% endif %}
+(<a class="newwindow external-link" href="{{ page.header.pdf_url }}"><i class="fa {{pdf_download_link_icon}}" aria-hidden="true"></i>{{pdf_url_link_text}}</a> or <a class="newwindow external-link" href="{{ page.header.pdf_git_repo_url }}"><i class="fa {{pdf_git_repo_link_icon}}" aria-hidden="true"></i>{{pdf_git_repo_link_text}}</a>)
+{% endif %}
+{% endif %}
+{% else %}
+{% if not (page.header.pdf_git_repo_url) %}
+(<a class="newwindow external-link" href="{{ page.header.pdf_url }}"><i class="fa {{pdf_download_link_icon}}" aria-hidden="true"></i>{{pdf_url_link_text}}</a>)
+{% else %}
+(<a class="newwindow external-link" href="{{ page.header.pdf_url }}"><i class="fa {{pdf_download_link_icon}}" aria-hidden="true"></i>{{pdf_url_link_text}}</a> or <a class="newwindow external-link" href="{{ page.header.pdf_git_repo_url }}"><i class="fa {{pdf_git_repo_link_icon}}" aria-hidden="true"></i>{{pdf_git_repo_link_text}}</a>)
+{% endif %}
 {% endif %}
 <div class="embed-responsive embed-responsive-4by3">
-  <iframe src="https://docs.google.com/gview?url={{ page.header.pdf_url }}&embedded=true" width="640" height="480"></iframe>
+<iframe src="https://docs.google.com/gview?url={{ page.header.pdf_url }}&embedded=true" width="640" height="480"></iframe>
 </div>
 <br>
 {% endblock %}
