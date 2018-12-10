@@ -1,9 +1,6 @@
 ---
 title: Resources
 published: true
-hide_page_title: false
-show_sidebar: true
-hide_git_sync_repo_link: false
 ---
 ## Reflective Writing  
 *   [A short guide to reflective writing](https://intranet.birmingham.ac.uk/as/libraryservices/library/skills/asc/documents/public/Short-Guide-Reflective-Writing.pdf)
