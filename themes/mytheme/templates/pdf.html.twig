@@ -5,12 +5,16 @@
 {% set pdf_git_repo_link_text = 'Suggest an Edit on GitLab' %}
 {% set pdf_git_repo_link_icon = 'fa-gitlab' %}
 
-{% if page.header.display_content_titles is defined %}
-{% set displaycontenttitle = page.header.display_content_titles %}
+{% if page.header.display_pdf_title is defined and not (displaypagetitle is defined)%}
+{% set displaycontenttitle = page.header.display_pdf_title %}
+{% else %}
+{% set displaycontenttitle = false %}
 {% endif %}
 
-{% if page.header.display_content_links is defined %}
-{% set displaycontentlinks = page.header.display_content_links %}
+{% if page.header.display_pdf_links is defined and not (displaycontentlinks is defined)%}
+{% set displaycontentlinks = page.header.display_pdf_links %}
+{% else %}
+{% set displaycontentlinks = false %}
 {% endif %}
 
 {% block content %}
