@@ -1,6 +1,5 @@
 {# no tab indents for Page Inject Plugin compatibility - hibbittsdesign.org #}
 {% if page.header.published %}
-
 {% set pdf_url_link_text = 'Download PDF' %}
 {% set pdf_download_link_icon = 'fa-download' %}
 {% set pdf_git_repo_link_text = 'Suggest an Edit on GitLab' %}
@@ -15,7 +14,7 @@
 {% endif %}
 
 {% block content %}
-{{ page.content }}
+{{ page.content|raw }}
 {% if displaypagetitle is defined %}
 {% if displaypagetitle %}
 <strong>{{page.title}}</strong>
@@ -53,5 +52,4 @@
 </div>
 <br>
 {% endblock %}
-
 {% endif %}
