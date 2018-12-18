@@ -5,8 +5,6 @@ hide_page_title: false
 hide_git_sync_repo_link: false
 ---
 
-Demo edit.
-
 ## [:fa-calendar-o:Week 1 (May 9 - 15)](/home/week-01)
 **What is usability and user experience design?**  
 :fa-desktop:[plugin:page-inject](/all-slides/week-01-1?template=partials/pdflinkonly)
